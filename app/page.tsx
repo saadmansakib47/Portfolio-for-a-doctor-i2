@@ -27,7 +27,7 @@ export default function Home() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-black text-white text-2xl font-semibold tracking-wide">
-        <span className="typing-effect">A journey of healing, beauty, and dreams begins here…</span>
+        <span className="typing-effect">A journey of dreams begins here…</span>
       </div>
     )
   }

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -75,14 +73,7 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-merriweather);
-  --color-medical-blue: #e8f4fd;
-  --color-mint-green: #e8f5e8;
-  --color-soft-pink: #fdf2f8;
-  --color-primary-blue: #3b82f6;
-  --color-primary-green: #10b981;
-  --color-primary-pink: #ec4899;
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -128,23 +119,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  .medical-gradient {
-    background: linear-gradient(135deg, #e8f4fd 0%, #ffffff 50%, #e8f5e8 100%);
-  }
-
-  .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
-  }
-
-  .container-max {
-    @apply max-w-6xl mx-auto;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Birthday animation styles */
@@ -177,13 +151,13 @@ html {
   animation: confetti 3s linear infinite;
 }
 
-/* Intertitle typing + fade animations */
+/* Intertitle typing animations */
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 75%; /* Fixed missing percentage value that was preventing typing animation */
+    width: 60%;
   }
 }
 
@@ -211,8 +185,18 @@ html {
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   width: 0;
+  animation: typing 6s steps(55, end) forwards, blink 0.75s step-end infinite, fadeOut 8s ease-in-out forwards;
+}
 
-  /* Fixed typing animation to match exact character count and prevent extra spaces */
-  animation: typing 6s steps(55, end) forwards, /* adjusted steps to match exact character count of the text */ blink
-    0.75s step-end infinite, /* cursor blink */ fadeOut 8s ease-in-out forwards; /* extended fade timing to match slower typing */
+.medical-gradient {
+  background: linear-gradient(135deg, #e8f4fd 0%, #ffffff 50%, #e8f5e8 100%);
+}
+
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+.container-max {
+  max-width: 72rem;
+  margin: 0 auto;
 }
