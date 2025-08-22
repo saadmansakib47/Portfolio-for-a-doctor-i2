@@ -7,6 +7,9 @@ import Achievements from "@/components/achievements"
 import Interests from "@/components/interests"
 import Volunteering from "@/components/volunteering"
 import Reflections from "@/components/reflections"
+import Notes from "@/components/notes"
+import Moments from "@/components/moments"
+import QuoteGenerator from "@/components/quote-generator"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
@@ -22,6 +25,9 @@ export default function Home() {
       <Interests />
       <Volunteering />
       <Reflections />
+      <Notes />
+      <Moments />
+      <QuoteGenerator />
       <Contact />
       <Footer />
     </main>
