@@ -183,7 +183,7 @@ html {
     width: 0;
   }
   to {
-    width: 100%;
+    width: %;
   }
 }
 
@@ -212,6 +212,7 @@ html {
   letter-spacing: 0.05em;
   width: 0;
 
-  animation: typing 6s steps(40, end) forwards, /* slowed down typing from 3s to 6s */ blink 0.75s step-end infinite, /* cursor blink */
-    fadeOut 8s ease-in-out forwards; /* extended fade timing to match slower typing */
+  /* Fixed typing animation to match exact character count and prevent extra spaces */
+  animation: typing 6s steps(55, end) forwards, /* adjusted steps to match exact character count of the text */ blink
+    0.75s step-end infinite, /* cursor blink */ fadeOut 8s ease-in-out forwards; /* extended fade timing to match slower typing */
 }
