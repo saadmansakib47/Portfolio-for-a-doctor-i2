@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container-max">
-        <TypingTitle text="Le" underlineColor="blue" />
+        <TypingTitle text="Let's Connect" underlineColor="blue" />
         <div className="text-center mb-12">
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             I'd love to connect with fellow medical students, healthcare professionals, or anyone interested in
