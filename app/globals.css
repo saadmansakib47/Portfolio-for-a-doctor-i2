@@ -176,3 +176,33 @@ html {
 .confetti {
   animation: confetti 3s linear infinite;
 }
+
+/* Intertitle typing + fade animations */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeOut {
+  0%, 85% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  width: 0;
+
+  animation: 
+    typing 3s steps(40, end) forwards,   /* typing effect */
+    blink 0.75s step-end infinite,       /* cursor blink */
+    fadeOut 5s ease-in-out forwards;     /* fade away */
+}

@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Linkedin, Facebook, Instagram } from "lucide-react"
 import TypingTitle from "./typing-title"
 
 export default function Contact() {
@@ -16,9 +15,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log("Form submitted:", formData)
-    // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" })
     alert("Thank you for your message! I will get back to you soon.")
   }
@@ -34,14 +31,17 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container-max">
         <TypingTitle text="Let's Connect" underlineColor="blue" />
+        
         <div className="text-center mb-12">
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            I'd love to connect with fellow medical students, healthcare professionals, or anyone interested in
-            healthcare and medical research.
+            I'd love to connect with fellow medical students, healthcare professionals, 
+            or anyone interested in healthcare and medical research.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          
+          {/* Contact Info + Socials */}
           <div className="space-y-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="font-serif text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
@@ -55,6 +55,7 @@ export default function Contact() {
                     <p className="text-gray-600">fariha.nidhi@email.com</p>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <Phone className="h-6 w-6 text-green-600" />
@@ -64,6 +65,7 @@ export default function Contact() {
                     <p className="text-gray-600">+880 XXX-XXXX</p>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
                     <MapPin className="h-6 w-6 text-pink-600" />
@@ -76,25 +78,40 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            {/* Socials */}
+            <div className="bg-white p-6 rounded-xl shadow-lg"> 
               <h3 className="font-serif text-2xl font-bold text-gray-800 mb-6">Connect With Me</h3>
               <div className="flex space-x-4">
+                {/* Facebook */}
                 <a
-                  href="#"
+                  href="https://www.facebook.com/fariha.afrin.nidhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
                 >
-                  <Linkedin className="h-6 w-6 text-blue-600" />
+                  <Facebook className="h-6 w-6 text-blue-600" />
                 </a>
+
+                {/* Instagram */}
                 <a
                   href="#"
-                  className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+                  className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center hover:bg-pink-200 transition-colors"
                 >
-                  <Github className="h-6 w-6 text-gray-600" />
+                  <Instagram className="h-6 w-6 text-pink-500" />
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center hover:bg-blue-100 transition-colors"
+                >
+                  <Linkedin className="h-6 w-6 text-blue-700" />
                 </a>
               </div>
             </div>
           </div>
 
+          {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="font-serif text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">

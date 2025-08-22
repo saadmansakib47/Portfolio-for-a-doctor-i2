@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight, BookOpen, FileText, Lightbulb, Heart } from "lucide-react"
+import { ChevronLeft, ChevronRight, BookOpen, FileText, Lightbulb, Heart, Download, Info } from "lucide-react"
 import TypingTitle from "./typing-title"
 
 const notes = [
@@ -101,13 +101,27 @@ export default function Notes() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex-shrink-0 w-80 p-6 rounded-xl border-2 ${note.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                  className={`flex-shrink-0 w-80 p-6 rounded-xl border-2 ${note.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between`}
                 >
-                  <div className="flex items-center mb-4">
-                    <IconComponent className="w-6 h-6 text-teal-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-800">{note.title}</h3>
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <IconComponent className="w-6 h-6 text-teal-600 mr-3" />
+                      <h3 className="text-xl font-semibold text-gray-800">{note.title}</h3>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed mb-6">{note.content}</p>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">{note.content}</p>
+
+                  {/* Buttons Section */}
+                  <div className="flex justify-between mt-auto">
+                    <button className="flex items-center px-3 py-2 text-sm bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition">
+                      <Download className="w-4 h-4 mr-2" />
+                      Download
+                    </button>
+                    <button className="flex items-center px-3 py-2 text-sm bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition">
+                      <Info className="w-4 h-4 mr-2" />
+                      Details
+                    </button>
+                  </div>
                 </motion.div>
               )
             })}

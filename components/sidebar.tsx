@@ -35,7 +35,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-2">
               <Heart className="h-6 w-6 text-pink-500" />
-              <span className="font-serif font-bold text-xl text-gray-800">Portfolio</span>
+              <span className="font-serif font-bold text-xl text-gray-800">Nidhi</span>
             </div>
             <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
               <X className="h-5 w-5 text-gray-600" />

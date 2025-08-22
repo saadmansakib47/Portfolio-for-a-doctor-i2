@@ -34,7 +34,7 @@ export default function Hero() {
             Fariha Afrin <span className="text-blue-600">Nidhi</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-            MBBS Student | Future Healthcare Professional | Passionate about Medical Research
+            MBBS Student | Aspiring Healthcare Professional | Passionate about Medical Research
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
