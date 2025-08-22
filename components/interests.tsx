@@ -1,13 +1,11 @@
 import { Book, Music, Camera, Plane, Heart, Users } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Interests() {
   return (
     <section id="interests" className="section-padding bg-white">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Interests & Hobbies</h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="Interests & Hobbies" underlineColor="green" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">

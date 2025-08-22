@@ -123,7 +123,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Fariha Afrin Nidhi. Made with <Heart className="inline h-4 w-4 text-pink-500" /> for healthcare and
+            © 2025 Black Eagle. Made with <Heart className="inline h-4 w-4 text-pink-500" /> for healthcare and
             humanity.
           </p>
         </div>

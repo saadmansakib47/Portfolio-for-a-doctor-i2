@@ -1,13 +1,11 @@
 import { Trophy, Star, Medal, Target } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Achievements() {
   return (
     <section id="achievements" className="section-padding bg-gradient-to-br from-pink-50 to-blue-50">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Achievements</h2>
-          <div className="w-24 h-1 bg-pink-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="Achievements" underlineColor="pink" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">

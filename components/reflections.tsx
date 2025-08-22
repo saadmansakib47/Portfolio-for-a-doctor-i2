@@ -1,11 +1,13 @@
 import { Quote, Heart, Lightbulb, Target } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Reflections() {
   return (
     <section id="reflections" className="section-padding bg-white">
       <div className="container-max">
+        <TypingTitle text="Reflections & Philosophy" underlineColor="blue" />
+
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Reflections & Philosophy</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 

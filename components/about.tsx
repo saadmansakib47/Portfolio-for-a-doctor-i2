@@ -1,13 +1,32 @@
+"use client"
+
 import { User, MapPin, Calendar } from "lucide-react"
+import { useState, useEffect } from "react"
+import TypingTitle from "./typing-title"
 
 export default function About() {
+  const [displayedText, setDisplayedText] = useState("")
+  const fullText =
+    "I am a dedicated MBBS student with a deep passion for healthcare and medical research. My journey in medicine is driven by a genuine desire to make a positive impact on people's lives and contribute to the advancement of medical science."
+
+  useEffect(() => {
+    let index = 0
+    const timer = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayedText(fullText.slice(0, index + 1))
+        index++
+      } else {
+        clearInterval(timer)
+      }
+    }, 50) // Adjust speed by changing this value (lower = faster)
+
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section id="about" className="section-padding bg-white">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="About Me" underlineColor="blue" />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -21,13 +40,12 @@ export default function About() {
             </div>
             <div className="flex items-center space-x-3 text-gray-600">
               <Calendar className="h-5 w-5 text-pink-600" />
-              <span>Born: December 25th</span>
+              <span>Greeted Earth : August 23</span>
             </div>
 
-            <p className="text-gray-700 leading-relaxed text-lg">
-              I am a dedicated MBBS student with a deep passion for healthcare and medical research. My journey in
-              medicine is driven by a genuine desire to make a positive impact on people's lives and contribute to the
-              advancement of medical science.
+            <p className="text-gray-700 leading-relaxed text-lg min-h-[4rem]">
+              {displayedText}
+              <span className="animate-pulse">|</span>
             </p>
 
             <p className="text-gray-700 leading-relaxed">

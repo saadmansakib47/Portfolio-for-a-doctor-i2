@@ -1,13 +1,13 @@
 import { GraduationCap, Award, BookOpen } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Education() {
   return (
     <section id="education" className="section-padding bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Education</h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="Education" underlineColor="green" />
+
+        <div className="text-center mb-12">{/* <div className="w-24 h-1 bg-green-600 mx-auto"></div> */}</div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">

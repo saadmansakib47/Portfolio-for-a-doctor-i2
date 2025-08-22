@@ -1,13 +1,11 @@
 import { Microscope, FileText, Users, TrendingUp } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Research() {
   return (
     <section id="research" className="section-padding bg-white">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Research & Projects</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="Research & Projects" underlineColor="blue" />
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">

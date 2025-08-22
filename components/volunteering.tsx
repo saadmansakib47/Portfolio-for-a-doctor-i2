@@ -1,13 +1,11 @@
 import { HandHeart, Users, Globe, Stethoscope } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Volunteering() {
   return (
     <section id="volunteering" className="section-padding bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Volunteering & Service</h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
-        </div>
+        <TypingTitle text="Volunteering & Service" underlineColor="green" />
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg">

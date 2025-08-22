@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react"
+import TypingTitle from "./typing-title"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -32,9 +33,8 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-gradient-to-br from-blue-50 to-green-50">
       <div className="container-max">
+        <TypingTitle text="Le" underlineColor="blue" />
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             I'd love to connect with fellow medical students, healthcare professionals, or anyone interested in
             healthcare and medical research.

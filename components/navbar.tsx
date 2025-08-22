@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <Heart className="h-6 w-6 text-pink-500" />
-            <span className="font-serif font-bold text-xl text-gray-800">Fariha Afrin Nidhi</span>
+            <span className="font-serif font-bold text-xl text-gray-800">Nidhi</span>
           </div>
 
           {/* Desktop Navigation */}
