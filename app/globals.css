@@ -183,7 +183,7 @@ html {
     width: 0;
   }
   to {
-    width: %;
+    width: 75%; /* Fixed missing percentage value that was preventing typing animation */
   }
 }
 
